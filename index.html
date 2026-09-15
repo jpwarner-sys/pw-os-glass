@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PW OS</title>
+  <meta name="theme-color" content="#050505">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fill density-1">
+  <div id="shell">
+    <header id="chrome">
+      <div id="mark">PW OS</div>
+      <div class="spacer"></div>
+      <button type="button" class="glyph" id="g-fill" aria-pressed="true" aria-label="Fill">
+        <span class="g-fill"></span>
+      </button>
+      <button type="button" class="glyph" id="g-split" aria-pressed="false" aria-label="Compact">
+        <span class="g-split"></span>
+      </button>
+      <div id="pips" aria-label="Density">
+        <button type="button" data-d="0"></button>
+        <button type="button" data-d="1" class="on"></button>
+        <button type="button" data-d="2"></button>
+        <button type="button" data-d="3"></button>
+      </div>
+      <button type="button" id="bind-pip" aria-label="Bind"></button>
+    </header>
+    <div id="bind-sheet">
+      <button type="button" id="btn-fs">Folder</button>
+      <button type="button" id="btn-drive">Drive</button>
+    </div>
+    <main id="stage">
+      <div id="void-mark"><span>PW OS</span></div>
+      <p id="halt">That folder is the workshop, not the cabinet.</p>
+      <div id="tiles"></div>
+      <div id="legend"></div>
+    </main>
+    <div id="dock">
+      <input id="dump" type="text" autocomplete="off" spellcheck="false" placeholder="" disabled>
+    </div>
+  </div>
+  <script src="https://accounts.google.com/gsi/client" async></script>
+  <script src="config.js"></script>
+  <script src="parse.js"></script>
+  <script src="demo.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
