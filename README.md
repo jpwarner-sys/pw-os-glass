@@ -12,7 +12,7 @@ After GitHub Pages is on for `jpwarner-sys/pw-os-glass`:
 
 Paste that over `[GLASS_URL]` in `START_HERE.md`.
 
-`?demo=1` wakes on fixture files so you can see tiles without his Drive. Do not send Paul that query.
+`?demo=1` wakes on fixture files so you can see tiles without his Drive. Do not send the owner that query.
 
 ## Bind
 
