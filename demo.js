@@ -1,4 +1,4 @@
-/* Loaded only so ?demo=1 can wake the glass without Paul's cabinet.
+/* Loaded only so ?demo=1 can wake the glass without a live cabinet.
    Not night-one content. Not his words. */
 window.PW_DEMO = [
   {
