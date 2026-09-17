@@ -10,6 +10,8 @@ After GitHub Pages is on for `jpwarner-sys/pw-os-glass`:
 
 `https://jpwarner-sys.github.io/pw-os-glass/`
 
+**Recommendation:** For isolation from other apps on the shared `github.io` origin (like Joe OS glass), you can serve this from `glass.ontologyhome.ca/pw` (or similar). No DNS changes are strictly required, but it prevents `localStorage` and Service Worker cache collisions.
+
 Paste that over `[GLASS_URL]` in `START_HERE.md`.
 
 `?demo=1` wakes on fixture files so you can see tiles without his Drive. Do not send the owner that query.
