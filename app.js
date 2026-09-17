@@ -2,19 +2,19 @@
 (function () {
   "use strict";
   var state = {
-    mode: localStorage.getItem("pw.mode") || "fill",
-    density: Math.max(0, Math.min(3, parseInt(localStorage.getItem("pw.density") || "1", 10) || 1)),
-    focus: localStorage.getItem("pw.focus") || "now",
+    mode: localStorage.getItem("pw-glass.mode") || "fill",
+    density: Math.max(0, Math.min(3, parseInt(localStorage.getItem("pw-glass.density") || "1", 10) || 1)),
+    focus: localStorage.getItem("pw-glass.focus") || "now",
     sizes: {},
-    pipe: localStorage.getItem("pw.pipe") || "",
-    folderId: localStorage.getItem("pw.folderId") || "",
+    pipe: localStorage.getItem("pw-glass.pipe") || "",
+    folderId: localStorage.getItem("pw-glass.folderId") || "",
     dirHandle: null,
     token: null,
     clientId: (window.PW_CONFIG && window.PW_CONFIG.GOOGLE_CLIENT_ID) || "",
     catalog: { halt: false, now: "", projects: [], vessels: [], modules: [], empty: true },
     bound: false,
   };
-  try { state.sizes = JSON.parse(localStorage.getItem("pw.sizes") || "{}"); } catch (e) { state.sizes = {}; }
+  try { state.sizes = JSON.parse(localStorage.getItem("pw-glass.sizes") || "{}"); } catch (e) { state.sizes = {}; }
   function $(id) { return document.getElementById(id); }
   function applyChrome() {
     document.body.className = (state.mode === "compact" ? "compact" : "fill") + " density-" + state.density + (state.catalog.halt ? " halt" : "");
@@ -26,12 +26,12 @@
     $("bind-pip").id = "bind-pip";
   }
   function persist() {
-    localStorage.setItem("pw.mode", state.mode);
-    localStorage.setItem("pw.density", String(state.density));
-    localStorage.setItem("pw.focus", state.focus || "");
-    localStorage.setItem("pw.sizes", JSON.stringify(state.sizes));
-    localStorage.setItem("pw.pipe", state.pipe || "");
-    localStorage.setItem("pw.folderId", state.folderId || "");
+    localStorage.setItem("pw-glass.mode", state.mode);
+    localStorage.setItem("pw-glass.density", String(state.density));
+    localStorage.setItem("pw-glass.focus", state.focus || "");
+    localStorage.setItem("pw-glass.sizes", JSON.stringify(state.sizes));
+    localStorage.setItem("pw-glass.pipe", state.pipe || "");
+    localStorage.setItem("pw-glass.folderId", state.folderId || "");
   }
   function esc(s) {
     return String(s).replace(/&/g, "&").replace(/</g, "<").replace(/>/g, ">");
